@@ -10,6 +10,9 @@ package com.baosight.xinsight.datalake.common;
  **/
 
 public class Constants {
-    public static final String COPY_ON_WRITE = "copy_on_write";
-    public static final String MERGE_ON_READ = "merge_on_read";
+    static enum table_type {
+        cow,
+        mor,
+        cc,
+    }
 }
