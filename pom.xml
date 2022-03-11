@@ -66,11 +66,9 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.2.5.RELEASE</spring-boot.version>
         <!--        <hive-jdbc.version>1.1.0</hive-jdbc.version>-->
-        <stspro.web.rest2.version>1.0.0.2.0</stspro.web.rest2.version>
-        <stspro.common.version>1.0.0.2.0</stspro.common.version>
-        <stspro.assembly.version>1.0.0.2.0</stspro.assembly.version>
-        <stspro.cfgsvr2.version>1.0.0.2.0</stspro.cfgsvr2.version>
-        <stspro.streaming.version>1.0.0.2.0</stspro.streaming.version>
+        <stspro.version>1.0.0.2.0</stspro.version>
+        <datalake.version>1.0.0.0.0</datalake.version>
+
     </properties>
     <repositories>
         <repository>
