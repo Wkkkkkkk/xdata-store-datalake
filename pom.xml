@@ -51,6 +51,9 @@
         <codehaus.jackson.version>1.9.11</codehaus.jackson.version>
         <druid.version>1.1.21</druid.version>
         <httpclient.version>4.3.3</httpclient.version>
+        <flink.version>1.13.2</flink.version>
+        <scala.binary.version>2.11</scala.binary.version>
+        <hudi.version>0.10.1</hudi.version>
         <hutool.version>5.7.14</hutool.version>
         <java.version>1.8</java.version>
         <junit.version>4.12</junit.version>
