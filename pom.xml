@@ -9,7 +9,8 @@
     <version>1.0.0.0.0</version>
     <modules>
         <module>datalake-common</module>
-        <module>datalake-common</module>
+        <module>datalake-core</module>
+        <module>datalake-sdk</module>
     </modules>
 
 
@@ -48,12 +49,12 @@
     </profiles>
 
     <properties>
-        <codehaus.jackson.version>1.9.11</codehaus.jackson.version>
-        <druid.version>1.1.21</druid.version>
-        <httpclient.version>4.3.3</httpclient.version>
         <flink.version>1.13.2</flink.version>
         <scala.binary.version>2.11</scala.binary.version>
         <hudi.version>0.10.1</hudi.version>
+        <codehaus.jackson.version>1.9.11</codehaus.jackson.version>
+        <druid.version>1.1.21</druid.version>
+        <httpclient.version>4.3.3</httpclient.version>
         <hutool.version>5.7.14</hutool.version>
         <java.version>1.8</java.version>
         <junit.version>4.12</junit.version>
@@ -88,6 +89,109 @@
     </repositories>
     <dependencyManagement>
         <dependencies>
+
+            <!-- Hoodie -->
+            <dependency>
+                <groupId>org.apache.hudi</groupId>
+                <artifactId>hudi-common</artifactId>
+                <version>${hudi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hudi</groupId>
+                <artifactId>hudi-client-common</artifactId>
+                <version>${hudi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hudi</groupId>
+                <artifactId>hudi-flink-client</artifactId>
+                <version>${hudi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hudi</groupId>
+                <artifactId>hudi-flink_${scala.binary.version}</artifactId>
+                <version>${hudi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hudi</groupId>
+                <artifactId>hudi-hadoop-mr</artifactId>
+                <version>${hudi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hudi</groupId>
+                <artifactId>hudi-hive-sync</artifactId>
+                <version>${hudi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hudi</groupId>
+                <artifactId>hudi-sync-common</artifactId>
+                <version>${hudi.version}</version>
+            </dependency>
+
+            <!-- Flink -->
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-streaming-java_${scala.binary.version}</artifactId>
+                <version>${flink.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-clients_${scala.binary.version}</artifactId>
+                <version>${flink.version}</version>
+                <scope>compile</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.esotericsoftware.kryo</groupId>
+                        <artifactId>kryo</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.esotericsoftware.minlog</groupId>
+                        <artifactId>minlog</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-connector-kafka_${scala.binary.version}</artifactId>
+                <version>${flink.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.kafka</groupId>
+                <artifactId>kafka-clients</artifactId>
+                <version>${kafka.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-hadoop-compatibility_${scala.binary.version}</artifactId>
+                <version>${flink.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-parquet_${scala.binary.version}</artifactId>
+                <version>${flink.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-json</artifactId>
+                <version>${flink.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-table-common</artifactId>
+                <version>${flink.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-table-runtime-blink_${scala.binary.version}</artifactId>
+                <version>${flink.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.flink</groupId>
+                <artifactId>flink-table-planner-blink_${scala.binary.version}</artifactId>
+                <version>${flink.version}</version>
+            </dependency>
+
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -121,6 +225,7 @@
                 <artifactId>spring-boot-starter-log4j2</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>

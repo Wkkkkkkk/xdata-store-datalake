@@ -1,6 +1,9 @@
 package com.baosight.xdata.store.datalake.utils;
 
+
+import lombok.extern.log4j.Log4j2;
 import org.apache.flink.configuration.ConfigOption;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,28 +15,26 @@ import java.util.Map;
  * @Description: TODO
  * @Author wuke
  * @Date 2022-03-10 13:52
- * @Copyright: Copyright (c) 2021
  * @Version 1.0
  **/
-
+@Log4j2
 public class MergeTableSql {
+
     private MergeTableSql() {
 
     }
 
-//    public static final RowType ROW_TYPE = (RowType) ROW_DATA_TYPE.getLogicalType();
-//
-//    private static final List<String> FIELDS = ROW_TYPE.getFields().stream()
-//            .map(RowType.RowField::asSummaryString).collect(Collectors.toList());
-
-    public static String getCreateHoodieTableDDL(
-            String tableName,
-            List<String> fields,
-            Map<String, String> options,
-            boolean havePartition,
-            String partitionField) {
-        return getCreateHoodieTableDDL(tableName, fields, options, havePartition, "uuid", partitionField);
+    public void aa() {
+        log.info("aaa");
     }
+//    public static String getCreateHoodieTableDDL(
+//            String tableName,
+//            List<String> fields,
+//            Map<String, String> options,
+//            boolean havePartition,
+//            String partitionField) {
+//        return getCreateHoodieTableDDL(tableName, fields, options, havePartition, "uuid", partitionField);
+//    }
 
     public static String getCreateHoodieTableDDL(
             String tableName,
