@@ -1,6 +1,6 @@
 package com.baosight.xdata.store.datalake.controller;
 
-import com.baosight.xdata.store.datalake.service.STSMergeTableFactory;
+import com.baosight.xdata.store.datalake.controller.service.STSMergeTableFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,8 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class STSMergeTableFactoryController {
     @Autowired
-    STSMergeTableFactory met;
-
+    STSMergeTableFactory stsMergeTableFactory;
     public void sest() {
     }
 

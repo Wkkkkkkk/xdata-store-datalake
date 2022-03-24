@@ -1,6 +1,6 @@
-package com.baosight.xdata.store.datalake.service.impl;
+package com.baosight.xdata.store.datalake.controller.service.impl;
 
-import com.baosight.xdata.store.datalake.service.STSMergeTableFactory;
+import com.baosight.xdata.store.datalake.controller.service.STSMergeTableFactory;
 import org.springframework.stereotype.Service;
 
 /**

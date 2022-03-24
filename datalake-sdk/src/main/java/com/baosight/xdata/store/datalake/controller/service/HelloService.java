@@ -1,6 +1,4 @@
-package com.baosight.xdata.store.datalake.service;
-
-import com.baosight.xdata.store.datalake.service.impl.HelloServiceImpl;
+package com.baosight.xdata.store.datalake.controller.service;
 
 /**
  * @ClassName helloService

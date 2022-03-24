@@ -89,7 +89,6 @@
     </repositories>
     <dependencyManagement>
         <dependencies>
-
             <!-- Hoodie -->
             <dependency>
                 <groupId>org.apache.hudi</groupId>

@@ -145,8 +145,6 @@
             <artifactId>flink-table-planner-blink_${scala.binary.version}</artifactId>
             <scope>provided</scope>
         </dependency>
-
-
     </dependencies>
 
 

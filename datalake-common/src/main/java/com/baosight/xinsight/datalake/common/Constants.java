@@ -8,7 +8,7 @@ package com.baosight.xinsight.datalake.common;
  * @Version 1.0
  **/
 
-public class Constants {
+public  class Constants {
     public final static String st1s1 = "";
     public final static String sts1 = "";
     public final static String sts2 = "";

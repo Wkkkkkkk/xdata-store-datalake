@@ -1,4 +1,4 @@
-package com.baosight.xdata.store.datalake.service;
+package com.baosight.xdata.store.datalake.controller.service;
 
 /**
  * @ClassName STSMergeTable
